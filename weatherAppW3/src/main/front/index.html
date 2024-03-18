@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Updated font family */
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #b1f8b1;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 470px;
+            color: #000000;
+            background: #4fb10e;
+            margin: 10px 0;
+            border-radius: 20px;
+            padding: 60px 35px; /* Adjusted padding */
+        }
+
+        .search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search input {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            color: #555;
+            padding: 15px 25px; /* Adjusted padding */
+            height: 60px;
+            border-radius: 3px;
+            flex: 1;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+
+        .search button {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .search button:hover {
+            background-color: #00a1fe;
+            color: #fff;
+        }
+
+        .search img {
+            width: 30px;
+        }
+
+        .weather-icon {
+            width: 150px; /* Adjusted width */
+            margin-top: 30px;
+        }
+
+        .weather h1 {
+            font-size: 70px; /* Adjusted font size */
+            font-weight: 500;
+        }
+
+        .weather h2 {
+            font-size: 40px; /* Adjusted font size */
+            font-weight: 400;
+            margin-top: -10px;
+        }
+
+        .details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-top: 40px; /* Adjusted margin-top */
+        }
+
+        .col {
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .col img {
+            width: 36px; /* Adjusted width */
+            margin-right: 10px;
+        }
+
+        .humidity,
+        .wind {
+            font-size: 24px; /* Adjusted font size */
+            margin-top: -10px;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div id="weatherData">
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter the city" spellcheck="false">
+            <button><img src="/images/search.png"></button>
+        </div>
+        <div class="weather">
+            <img src="/images/clouds.png" class="weather-icon">
+            <h1 class="temp">12K</h1> <!-- Updated temperature display with Kelvin symbol -->
+            <h2 class="city">Toshkent</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="/images/humidity.png">
+                    <div>
+                        <p class="humidity">100%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="/images/wind.png">
+                    <div>
+                        <p class="wind">1 m/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="demo.js"></script>
+
+
+</body>
+</html>
